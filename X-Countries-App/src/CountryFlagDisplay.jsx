@@ -7,20 +7,19 @@ function CountryFlagDisplay() {
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const response = await fetch('https://restcountries.com/v3.1/all');
-        if (!response.ok) {
-          throw new Error('Failed to fetch data');
+        try {
+          const response = await fetch('https://restcountries.com/v3.1/all');
+          if (!response.ok) {
+            throw new Error('Failed to fetch data');
+          }
+          const data = await response.json();
+          setCountries(data);
+        } catch (error) {
+          setError(error.message);
+          console.error('API Error:', error); // Log error to console
         }
-        const data = await response.json();
-        setCountries(data);
-      } catch (error) {
-        setError(error.message);
-        console.error(error);
-      }
-    };
-
-    fetchData();
+      };    
+      fetchData();
   }, []);
 
   return (
