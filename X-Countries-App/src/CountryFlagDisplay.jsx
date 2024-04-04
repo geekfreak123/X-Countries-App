@@ -25,6 +25,7 @@ function CountryFlagDisplay() {
 
   return (
     <div>
+      <h1>Country Flag Display</h1>
       {error && <p>Error: {error}</p>}
       <div className="country-list">
         {countries.map(country => (
