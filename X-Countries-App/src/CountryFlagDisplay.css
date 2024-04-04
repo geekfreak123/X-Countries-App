@@ -1,0 +1,25 @@
+.country-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  .country-item {
+    width: calc(14.28% - 10px); /* 100% / 7 - margin */
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 30px;
+  }
+  
+  .country-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .country-item p {
+    margin-top: 10px;
+  }
+  
